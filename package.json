@@ -1,0 +1,36 @@
+{
+  "name": "walkie-doggy",
+  "version": "0.0.0",
+  "description": "Dag walking service in Riga, Latvia.",
+  "license": "MIT",
+  "author": "martinskozlovskis",
+  "homepage": "https://walkie-doggy.herokuapp.com",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kozlo/walkie-doggie.git"
+  },
+  "keywords": [
+    "dog",
+    "walking",
+    "service",
+    "Riga",
+    "Latvia",
+    "suni",
+    "pastaigas",
+    "serviss",
+    "Latvija"
+  ],
+  "engines" : {
+    "node" : "0.12.x"
+  }
+}
