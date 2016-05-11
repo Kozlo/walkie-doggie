@@ -1,13 +1,15 @@
 import React from "react";
 
-import Header from "../components/home/Header";
+// TODO: include back later
+//import Header from "../components/home/Header";
+import Cardio from "../components/home/Cardio";
 
 
 export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Cardio />
             </div>
         );
     }
