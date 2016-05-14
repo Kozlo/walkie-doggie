@@ -3,25 +3,25 @@ import React from "react";
 export default class BottomSection extends React.Component {
     render() {
         return (
-            <section class="section section-padded blue-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="owl-twitter owl-carousel">
-                                <div class="item text-center">
-                                    <i class="icon fa fa-twitter"></i>
-                                    <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 class="light-white light">#health #training #exercise</h4>
+            <section className="section section-padded blue-bg">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 col-md-offset-2">
+                            <div className="owl-twitter owl-carousel">
+                                <div className="item text-center">
+                                    <i className="icon fa fa-twitter"></i>
+                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
+                                    <h4 className="light-white light">#health #training #exercise</h4>
                                 </div>
-                                <div class="item text-center">
-                                    <i class="icon fa fa-twitter"></i>
-                                    <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 class="light-white light">#health #training #exercise</h4>
+                                <div className="item text-center">
+                                    <i className="icon fa fa-twitter"></i>
+                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
+                                    <h4 className="light-white light">#health #training #exercise</h4>
                                 </div>
-                                <div class="item text-center">
-                                    <i class="icon fa fa-twitter"></i>
-                                    <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 class="light-white light">#health #training #exercise</h4>
+                                <div className="item text-center">
+                                    <i className="icon fa fa-twitter"></i>
+                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
+                                    <h4 className="light-white light">#health #training #exercise</h4>
                                 </div>
                             </div>
                         </div>

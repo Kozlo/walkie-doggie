@@ -3,23 +3,23 @@ import React from "react";
 export default class PricingSection extends React.Component {
     render() {
         return (
-            <section id="pricing" class="section">
-                <div class="container">
-                    <div class="row title text-center">
-                        <h2 class="margin-top white">Pricing</h2>
-                        <h4 class="light white">Choose your favorite pricing plan and sign up today!</h4>
+            <section id="pricing" className="section">
+                <div className="container">
+                    <div className="row title text-center">
+                        <h2 className="margin-top white">Pricing</h2>
+                        <h4 className="light white">Choose your favorite pricing plan and sign up today!</h4>
                     </div>
-                    <div class="row no-margin">
-                        <div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
-                            <div class="pricing">
-                                <div class="box-main active" data-img="img/pricing1.jpg">
-                                    <h4 class="white">Yoga Pilates</h4>
-                                    <h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
-                                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
-                                    <i class="info-icon icon_question"></i>
+                    <div className="row no-margin">
+                        <div className="col-md-7 no-padding col-md-offset-5 pricings text-center">
+                            <div className="pricing">
+                                <div className="box-main active" data-img="img/pricing1.jpg">
+                                    <h4 className="white">Yoga Pilates</h4>
+                                    <h4 className="white regular light">$850.00 <span className="small-font">/ year</span></h4>
+                                    <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-white-fill">Sign Up Now</a>
+                                    <i className="info-icon icon_question"></i>
                                 </div>
-                                <div class="box-second active">
-                                    <ul class="white-list text-left">
+                                <div className="box-second active">
+                                    <ul className="white-list text-left">
                                         <li>One Personal Trainer</li>
                                         <li>Big gym space for training</li>
                                         <li>Free tools &amp; props</li>
@@ -28,15 +28,15 @@ export default class PricingSection extends React.Component {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="pricing">
-                                <div class="box-main" data-img="img/pricing2.jpg">
-                                    <h4 class="white">Cardio Training</h4>
-                                    <h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
-                                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
-                                    <i class="info-icon icon_question"></i>
+                            <div className="pricing">
+                                <div className="box-main" data-img="img/pricing2.jpg">
+                                    <h4 className="white">Cardio Training</h4>
+                                    <h4 className="white regular light">$100.00 <span className="small-font">/ year</span></h4>
+                                    <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-white-fill">Sign Up Now</a>
+                                    <i className="info-icon icon_question"></i>
                                 </div>
-                                <div class="box-second">
-                                    <ul class="white-list text-left">
+                                <div className="box-second">
+                                    <ul className="white-list text-left">
                                         <li>One Personal Trainer</li>
                                         <li>Big gym space for training</li>
                                         <li>Free tools &amp; props</li>

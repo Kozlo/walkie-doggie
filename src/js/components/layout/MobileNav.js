@@ -4,10 +4,10 @@ export default class Nav extends React.Component {
     render() {
         /* Holder for mobile navigation */
         return (
-            <div class="mobile-nav">
+            <div className="mobile-nav">
                 <ul>
                 </ul>
-                <a href="#" class="close-link"><i class="arrow_up"></i></a>
+                <a href="#" className="close-link"><i className="arrow_up"></i></a>
             </div>
         );
     }
