@@ -1,5 +1,9 @@
 import React from "react";
 
+import Team1Img from "../../../../../../libs/img/team/team1.jpg";
+import Team2Img from "../../../../../../libs/img/team/team2.jpg";
+import Team3Img from "../../../../../../libs/img/team/team3.jpg";
+
 export default class TeamSection extends React.Component {
     render() {
         const teamStyle1 = { background: "url('img/team/team-cover1.jpg')", backgroundSize: "cover" };
@@ -22,7 +26,7 @@ export default class TeamSection extends React.Component {
                                         <h5 className="light light-white">1 - 5 sessions / month</h5>
                                     </div>
                                 </div>
-                                <img src="img/team/team3.jpg" alt="Team Image" className="avatar" />
+                                <img src={Team3Img} alt="Team Image" className="avatar" />
                                 <div className="title">
                                     <h4>Ben Adamson</h4>
                                     <h5 className="muted regular">Fitness Instructor</h5>
@@ -38,7 +42,7 @@ export default class TeamSection extends React.Component {
                                         <h5 className="light light-white">1 - 5 sessions / month</h5>
                                     </div>
                                 </div>
-                                <img src="img/team/team1.jpg" alt="Team Image" className="avatar" />
+                                <img src={Team1Img} alt="Team Image" className="avatar" />
                                 <div className="title">
                                     <h4>Eva Williams</h4>
                                     <h5 className="muted regular">Personal Trainer</h5>
@@ -54,7 +58,7 @@ export default class TeamSection extends React.Component {
                                         <h5 className="light light-white">1 - 5 sessions / month</h5>
                                     </div>
                                 </div>
-                                <img src="img/team/team2.jpg" alt="Team Image" className="avatar" />
+                                <img src={Team2Img} alt="Team Image" className="avatar" />
                                 <div className="title">
                                     <h4>John Phillips</h4>
                                     <h5 className="muted regular">Personal Trainer</h5>

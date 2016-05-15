@@ -1,5 +1,9 @@
 import React from "react";
 
+import HeartBlueIconImg from "../../../../../../libs/img/icons/heart-blue.png";
+import GuruBlueIconImg from "../../../../../../libs/img/icons/guru-blue.png";
+import WeightBlueIconImg from "../../../../../../libs/img/icons/weight-blue.png";
+
 export default class ServicesSection extends React.Component {
     render() {
         return (
@@ -13,7 +17,7 @@ export default class ServicesSection extends React.Component {
                         <div className="col-md-4">
                             <div className="service">
                                 <div className="icon-holder">
-                                    <img src="img/icons/heart-blue.png" alt="" className="icon" />
+                                    <img src={HeartBlueIconImg} alt="" className="icon" />
                                 </div>
                                 <h4 className="heading">Cardio Training</h4>
                                 <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
@@ -22,7 +26,7 @@ export default class ServicesSection extends React.Component {
                         <div className="col-md-4">
                             <div className="service">
                                 <div className="icon-holder">
-                                    <img src="img/icons/guru-blue.png" alt="" className="icon" />
+                                    <img src={GuruBlueIconImg} alt="" className="icon" />
                                 </div>
                                 <h4 className="heading">Yoga Pilates</h4>
                                 <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
@@ -31,7 +35,7 @@ export default class ServicesSection extends React.Component {
                         <div className="col-md-4">
                             <div className="service">
                                 <div className="icon-holder">
-                                    <img src="img/icons/weight-blue.png" alt="" className="icon" />
+                                    <img src={WeightBlueIconImg} alt="" className="icon" />
                                 </div>
                                 <h4 className="heading">Power Training</h4>
                                 <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>

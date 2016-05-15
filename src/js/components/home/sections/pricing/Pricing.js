@@ -1,5 +1,8 @@
 import React from "react";
 
+import Pricing1Img from "../../../../../../libs/img/pricing1.jpg";
+import Pricing2Img from "../../../../../../libs/img/pricing2.jpg";
+
 export default class PricingSection extends React.Component {
     render() {
         return (
@@ -12,7 +15,7 @@ export default class PricingSection extends React.Component {
                     <div className="row no-margin">
                         <div className="col-md-7 no-padding col-md-offset-5 pricings text-center">
                             <div className="pricing">
-                                <div className="box-main active" data-img="img/pricing1.jpg">
+                                <div className="box-main active" data-img={Pricing1Img}>
                                     <h4 className="white">Yoga Pilates</h4>
                                     <h4 className="white regular light">$850.00 <span className="small-font">/ year</span></h4>
                                     <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-white-fill">Sign Up Now</a>
@@ -29,7 +32,7 @@ export default class PricingSection extends React.Component {
                                 </div>
                             </div>
                             <div className="pricing">
-                                <div className="box-main" data-img="img/pricing2.jpg">
+                                <div className="box-main" data-img={Pricing2Img}>
                                     <h4 className="white">Cardio Training</h4>
                                     <h4 className="white regular light">$100.00 <span className="small-font">/ year</span></h4>
                                     <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-white-fill">Sign Up Now</a>
