@@ -1,5 +1,7 @@
 import React from "react";
 
+import LogoImg from "../../../../libs/img/logo.png";
+
 export default class Nav extends React.Component {
     render() {
         return (
@@ -13,7 +15,7 @@ export default class Nav extends React.Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt="" /></a>
+                        <a className="navbar-brand" href="#"><img src={LogoImg} data-active-url={'/libs/img/logo-active.png'} alt="" /></a>
                     </div>
                     {/* Collect the nav links, forms, and other content for toggling  */}
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
