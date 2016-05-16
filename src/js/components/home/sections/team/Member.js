@@ -2,9 +2,9 @@ import React from "react";
 
 export default class TeamMember extends React.Component {
     render() {
-        const oMember = this.props.member;
+        const { member, background } = this.props;
         const oStyle = {
-            background: this.props.background,
+            background: background,
             backgroundSize: "cover"
         };
         
@@ -12,14 +12,14 @@ export default class TeamMember extends React.Component {
             <div className="team text-center">
                 <div className="cover" style={oStyle}>
                     <div className="overlay text-center">
-                        <h3 className="white">{oMember.price}</h3>
-                        <h5 className="light light-white">{oMember.sessions}</h5>
+                        <h3 className="white">{member.price}</h3>
+                        <h5 className="light light-white">{member.sessions}</h5>
                     </div>
                 </div>
-                <img src={oMember.image.url} alt={oMember.image.alt} className="avatar" />
+                <img src={member.image.url} alt={member.image.alt} className="avatar" />
                 <div className="title">
-                    <h4>{oMember.name}</h4>
-                    <h5 className="muted regular">{oMember.role}</h5>
+                    <h4>{member.name}</h4>
+                    <h5 className="muted regular">{member.role}</h5>
                 </div>
                 <button data-toggle="modal" data-target="#modal1" className="btn btn-blue-fill">Sign Up Now</button>
             </div>
