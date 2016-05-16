@@ -1,11 +1,40 @@
 import React from "react";
 
+//import images
 import HeartBlueIconImg from "../../../../../../libs/img/icons/heart-blue.png";
 import GuruBlueIconImg from "../../../../../../libs/img/icons/guru-blue.png";
 import WeightBlueIconImg from "../../../../../../libs/img/icons/weight-blue.png";
 
+// import components
+import ServiceItem from "./item";
+
 export default class ServicesSection extends React.Component {
     render() {
+        const oItem1 = {
+            name: "Cardio Training",
+            description: "A elementum ligula lacus ac quam ultrices a scelerisque praesent velsuspendisse scelerisque a aenean hac montes.",
+            image: {
+                url: HeartBlueIconImg,
+                alt: "Cardio Training"
+            }
+        };
+        const oItem2 = {
+            name: "Yoga Pilates",
+            description: "A elementum ligula lacus ac quam ultrices a scelerisque praesent velsuspendisse scelerisque a aenean hac montes.",
+            image: {
+                url: GuruBlueIconImg,
+                alt: "Yoga Pilates"
+            }
+        };
+        const oItem3 = {
+            name: "Power Training",
+            description: "A elementum ligula lacus ac quam ultrices a scelerisque praesent velsuspendisse scelerisque a aenean hac montes.",
+            image: {
+                url: WeightBlueIconImg,
+                alt: "Power Training"
+            }
+        };
+
         return (
             <section id="services" className="section section-padded">
                 <div className="container">
@@ -15,31 +44,13 @@ export default class ServicesSection extends React.Component {
                     </div>
                     <div className="row services">
                         <div className="col-md-4">
-                            <div className="service">
-                                <div className="icon-holder">
-                                    <img src={HeartBlueIconImg} alt="" className="icon" />
-                                </div>
-                                <h4 className="heading">Cardio Training</h4>
-                                <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-                            </div>
+                            <ServiceItem item={oItem1} />
                         </div>
                         <div className="col-md-4">
-                            <div className="service">
-                                <div className="icon-holder">
-                                    <img src={GuruBlueIconImg} alt="" className="icon" />
-                                </div>
-                                <h4 className="heading">Yoga Pilates</h4>
-                                <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-                            </div>
+                            <ServiceItem item={oItem2} />
                         </div>
                         <div className="col-md-4">
-                            <div className="service">
-                                <div className="icon-holder">
-                                    <img src={WeightBlueIconImg} alt="" className="icon" />
-                                </div>
-                                <h4 className="heading">Power Training</h4>
-                                <p className="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-                            </div>
+                            <ServiceItem item={oItem3} />
                         </div>
                     </div>
                 </div>
