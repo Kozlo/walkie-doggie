@@ -1,15 +1,52 @@
 import React from "react";
 
+//import images
 import Team1Img from "../../../../../../libs/img/team/team1.jpg";
 import Team2Img from "../../../../../../libs/img/team/team2.jpg";
 import Team3Img from "../../../../../../libs/img/team/team3.jpg";
 
+//import components
+import TeamMember from "./Member";
+
 export default class TeamSection extends React.Component {
     render() {
-        const teamStyle1 = { background: "url('img/team/team-cover1.jpg')", backgroundSize: "cover" };
-        const teamStyle2 = { background: "url('img/team/team-cover2.jpg')", backgroundSize: "cover" };
-        const teamStyle3 = { background: "url('img/team/team-cover3.jpg')", backgroundSize: "cover" };
-        
+        // styles
+        const sBackground1 = "url('img/team/team-cover1.jpg')";
+        const sBackground2 = "url('img/team/team-cover2.jpg')";
+        const sBackground3 = "url('img/team/team-cover3.jpg')";
+
+        // team member variables
+        const oMember1 = {
+            name: "Ben Adamson",
+            role: "Fitness Instructor",
+            price: "$69.00",
+            sessions: "1 - 5 sessions / month",
+            image: {
+                url: Team1Img,
+                alt: "Team Image"
+            }
+        };
+        const oMember2 = {
+            name: "Eva Williams",
+            role: "Personal Trainer",
+            price: "$69.00",
+            sessions: "1 - 5 sessions / month",
+            image: {
+                url: Team2Img,
+                alt: "Team Image"
+            }
+        };
+        const oMember3 = {
+            name: "John Phillips",
+            role: "Personal Trainer",
+            price: "$69.00",
+            sessions: "1 - 5 sessions / month",
+            image: {
+                url: Team3Img,
+                alt: "Team Image"
+            }
+        };
+
         return (
             <section id="team" className="section gray-bg">
                 <div className="container">
@@ -19,52 +56,13 @@ export default class TeamSection extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="team text-center">
-                                <div className="cover" style={teamStyle1}>
-                                    <div className="overlay text-center">
-                                        <h3 className="white">$69.00</h3>
-                                        <h5 className="light light-white">1 - 5 sessions / month</h5>
-                                    </div>
-                                </div>
-                                <img src={Team3Img} alt="Team Image" className="avatar" />
-                                <div className="title">
-                                    <h4>Ben Adamson</h4>
-                                    <h5 className="muted regular">Fitness Instructor</h5>
-                                </div>
-                                <button data-toggle="modal" data-target="#modal1" className="btn btn-blue-fill">Sign Up Now</button>
-                            </div>
+                            <TeamMember member={oMember1} background={sBackground1} />
                         </div>
                         <div className="col-md-4">
-                            <div className="team text-center">
-                                <div className="cover" style={teamStyle2}>
-                                    <div className="overlay text-center">
-                                        <h3 className="white">$69.00</h3>
-                                        <h5 className="light light-white">1 - 5 sessions / month</h5>
-                                    </div>
-                                </div>
-                                <img src={Team1Img} alt="Team Image" className="avatar" />
-                                <div className="title">
-                                    <h4>Eva Williams</h4>
-                                    <h5 className="muted regular">Personal Trainer</h5>
-                                </div>
-                                <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-blue-fill ripple">Sign Up Now</a>
-                            </div>
+                            <TeamMember member={oMember2} background={sBackground2} />
                         </div>
                         <div className="col-md-4">
-                            <div className="team text-center">
-                                <div className="cover" style={teamStyle3}>
-                                    <div className="overlay text-center">
-                                        <h3 className="white">$69.00</h3>
-                                        <h5 className="light light-white">1 - 5 sessions / month</h5>
-                                    </div>
-                                </div>
-                                <img src={Team2Img} alt="Team Image" className="avatar" />
-                                <div className="title">
-                                    <h4>John Phillips</h4>
-                                    <h5 className="muted regular">Personal Trainer</h5>
-                                </div>
-                                <a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-blue-fill ripple">Sign Up Now</a>
-                            </div>
+                            <TeamMember member={oMember3} background={sBackground3} />
                         </div>
                     </div>
                 </div>
