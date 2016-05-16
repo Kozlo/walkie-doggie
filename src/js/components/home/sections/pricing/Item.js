@@ -22,7 +22,7 @@ export default class PricingItem extends React.Component {
                 </div>
                 <div className={sSecondBoxClasses}>
                     <ul className="white-list text-left">
-                        {specs.map(this.renderSpecs)}
+                        {specs.map(this.renderSpecs.bind(this))}
                     </ul>
                 </div>
             </div>
