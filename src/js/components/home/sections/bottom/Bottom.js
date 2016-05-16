@@ -1,28 +1,26 @@
 import React from "react";
 
+//import components
+import BottomItem from "./Item";
+
 export default class BottomSection extends React.Component {
     render() {
+        const oItem = {
+            tweet: "To enjoy the glow of good health, you must exercise.",
+            hashtags: ["#health", "#training", "#exercise"]
+        };
+
         return (
             <section className="section section-padded blue-bg">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
                             <div className="owl-twitter owl-carousel">
-                                <div className="item text-center">
-                                    <i className="icon fa fa-twitter"></i>
-                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 className="light-white light">#health #training #exercise</h4>
-                                </div>
-                                <div className="item text-center">
-                                    <i className="icon fa fa-twitter"></i>
-                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 className="light-white light">#health #training #exercise</h4>
-                                </div>
-                                <div className="item text-center">
-                                    <i className="icon fa fa-twitter"></i>
-                                    <h4 className="white light">To enjoy the glow of good health, you must exercise.</h4>
-                                    <h4 className="light-white light">#health #training #exercise</h4>
-                                </div>
+                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
+
+                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
+
+                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
                             </div>
                         </div>
                     </div>
