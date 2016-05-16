@@ -6,7 +6,7 @@ import GuruBlueIconImg from "../../../../../../libs/img/icons/guru-blue.png";
 import WeightBlueIconImg from "../../../../../../libs/img/icons/weight-blue.png";
 
 // import components
-import ServiceItem from "./item";
+import ServiceItem from "./Item";
 
 export default class ServicesSection extends React.Component {
     render() {
