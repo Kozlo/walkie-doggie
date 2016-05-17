@@ -1,9 +1,9 @@
 import React from "react";
 
 export default class PricingItem extends React.Component {
-    renderSpecs(spec) {
+    renderSpecs(spec, index) {
         return (
-            <li>{spec}</li>
+            <li key={index}>{spec}</li>
         );
     }
 
