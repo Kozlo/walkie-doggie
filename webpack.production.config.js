@@ -73,7 +73,7 @@ module.exports = {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
             loader: "url?limit=10000&mimetype=image/svg+xml&name=[path][name].[ext]"
         }, {
-            test: /\.jpe?g$|\.gif$|\.png$|\.otf$|\.ico$|\.txt$/,
+            test: /\.jpe?g$|\.gif$|\.png$|\.otf$|\.ico$|\.txt$|\.map$/,
             loader: "file?name=[path][name].[ext]"
         }, {
             test: /\.svg$/,

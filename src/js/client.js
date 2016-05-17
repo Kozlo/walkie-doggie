@@ -21,6 +21,15 @@ import "../../libs/js/templateMain.js";
 /*import "./template/tooltip.js";
 import "./template/typed.js";*/
 
+// import favicons
+import "../../libs/img/favicons/apple-touch-icon-60x60.png";
+import "../../libs/img/favicons/apple-touch-icon-57x57.png";
+import "../../libs/img/favicons/favicon-32x32.png";
+import "../../libs/img/favicons/favicon-16x16.png";
+
+// import other files
+import "../../libs/img/favicons/browserconfig.xml";
+
 // import React libraries
 import React from "react";
 import ReactDOM from "react-dom";

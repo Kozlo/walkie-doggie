@@ -43,34 +43,34 @@ module.exports = {
             loader: 'file?name=[name].[ext]'
         }, {
             test: /\.json?$/,
-            loader: 'json'
+            loader: 'json?name=[path][name].[ext]'
         }, {
             test: /\.css$/,
-            loader: 'style!css'
+            loader: ExtractTextPlugin.extract('style', 'css')
         }, {
             test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-            loader: "url?limit=10000&mimetype=application/font-woff"
+            loader: "url?limit=10000&mimetype=application/font-woff&name=[path][name].[ext]"
         }, {
             test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-            loader: "url?limit=10000&mimetype=application/font-woff"
+            loader: "url?limit=10000&mimetype=application/font-woff&name=[path][name].[ext]"
         }, {
             test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-            loader: "url?limit=10000&mimetype=application/octet-stream"
+            loader: "url?limit=10000&mimetype=application/octet-stream&name=[path][name].[ext]"
         }, {
             test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-            loader: "file"
+            loader: "file?name=[path][name].[ext]"
         }, {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-            loader: "url?limit=10000&mimetype=image/svg+xml"
+            loader: "url?limit=10000&mimetype=image/svg+xml&name=[path][name].[ext]"
         }, {
             test: /\.jpe?g$|\.gif$|\.png$|\.otf$|\.ico$|\.txt$/,
-            loader: "file"
+            loader: "file?name=[path][name].[ext]"
         }, {
             test: /\.svg$/,
-            loader: 'svg-loader?pngScale=2'
+            loader: 'svg-loader?pngScale=2&name=[path][name].[ext]'
         }, {
             test: /\.xml?$/,
-            loader: 'xml'
+            loader: 'xml?name=[path][name].[ext]'
         }]
     }
 };
