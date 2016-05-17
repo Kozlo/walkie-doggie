@@ -1,5 +1,8 @@
 import React from "react";
 
+//import all components
+import PricingPlan from "./pricing/Plan";
+
 export default class Signup extends React.Component {
     render() {
         return (
@@ -11,17 +14,9 @@ export default class Signup extends React.Component {
                         <form action="" className="popup-form">
                             <input type="text" className="form-control form-white" placeholder="Full Name" />
                             <input type="text" className="form-control form-white" placeholder="Email Address" />
-                            <div className="dropdown">
-                                <button id="dLabel" className="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pricing Plan
-                                </button>
-                                <ul className="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
-                                    <li className="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
-                                    <li className="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
-                                    <li className="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
-                                    <li className="animated lightSpeedIn"><a href="#">Free trial class</a></li>
-                                </ul>
-                            </div>
+
+                            <PricingPlan />
+
                             <div className="checkbox-holder text-left">
                                 <div className="checkbox">
                                     <input type="checkbox" value="None" id="squaredOne" name="check" />
