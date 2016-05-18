@@ -8,21 +8,35 @@ import Pricing2Img from "../../../../../../libs/img/pricing2.jpg";
 import PricingItem from "./Item";
 
 export default class PricingSection extends React.Component {
+    renderPricingItem(item, index) {
+        return (
+            <PricingItem
+                key={index}
+                active={item.active}
+                image={item.image}
+                service={item.service}
+                price={item.price}
+                frequency={item.frequency}
+                specs={item.specs} />
+        );
+    }
+
     render() {
-        const oItem1 = {
+        const aItems = [{
+            active: true,
             image: Pricing1Img,
             service: "Yoga Pilates",
             price: "$850",
             frequency: "year",
             specs: ["One Personal Trainer", "Big gym space for training", "Free tools & props", "Free locker", "Free before / after shower"]
-        };
-        const oItem2 = {
+        }, {
+            active: false,
             image: Pricing2Img,
             service: "Cardio Training",
             price: "$100",
             frequency: "year",
             specs: ["One Personal Trainer", "Big gym space for training", "Free tools & props", "Free locker", "Free before / after shower"]
-        };
+        }];
 
         return (
             <section id="pricing" className="section">
@@ -33,21 +47,7 @@ export default class PricingSection extends React.Component {
                     </div>
                     <div className="row no-margin">
                         <div className="col-md-7 no-padding col-md-offset-5 pricings text-center">
-                            <PricingItem
-                                active={true}
-                                image={oItem1.image}
-                                service={oItem1.service}
-                                price={oItem1.price}
-                                frequency={oItem1.frequency}
-                                specs={oItem1.specs} />
-
-                            <PricingItem
-                                active={false}
-                                image={oItem2.image}
-                                service={oItem2.service}
-                                price={oItem2.price}
-                                frequency={oItem2.frequency}
-                                specs={oItem2.specs} />
+                            {aItems.map(this.renderPricingItem.bind(this))}
                         </div>
                     </div>
                 </div>
