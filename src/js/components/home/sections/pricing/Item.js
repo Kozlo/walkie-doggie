@@ -9,8 +9,8 @@ export default class PricingItem extends React.Component {
 
     render() {
         const { active, image, service, price, frequency, specs } = this.props;
-        let sMainBoxClasses = "box-main" + (active ? " active" : "");
-        let sSecondBoxClasses = "box-second" + (active ? " active" : "");
+        const sMainBoxClasses = "box-main" + (active ? " active" : "");
+        const sSecondBoxClasses = "box-second" + (active ? " active" : "");
 
         return (
             <div className="pricing">
