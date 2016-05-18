@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class MembershipContainer extends React.Component {
+export default class Membership extends React.Component {
     render() {
         return (
             <div className="intro-table intro-table-hover">

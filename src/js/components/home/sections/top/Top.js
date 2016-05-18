@@ -1,8 +1,9 @@
 import React from "react";
 
-import ScheduleContainer from "./blocks/schedule/container";
-import MembershipContainer from "./blocks/membership/container";
-import TestimonialsContainer from "./blocks/testimonials/container";
+// import other modules
+import Schedule from "./blocks/schedule/Schedule";
+import Membership from "./blocks/membership/Membership";
+import Testimonials from "./blocks/testimonials/Testimonials";
 
 export default class TopSection extends React.Component {
     render() {
@@ -12,13 +13,13 @@ export default class TopSection extends React.Component {
                 <div className="container">
                     <div className="row intro-tables">
                         <div className="col-md-4">
-                            <ScheduleContainer />
+                            <Schedule />
                         </div>
                         <div className="col-md-4">
-                            <MembershipContainer />
+                            <Membership />
                         </div>
                         <div className="col-md-4">
-                            <TestimonialsContainer />
+                            <Testimonials />
                         </div>
                     </div>
                 </div>

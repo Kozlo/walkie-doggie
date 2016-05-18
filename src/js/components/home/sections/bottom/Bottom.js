@@ -4,11 +4,26 @@ import React from "react";
 import BottomItem from "./Item";
 
 export default class BottomSection extends React.Component {
+    renderBottomItem(item, index) {
+        return (
+            <BottomItem
+                key={index}
+                tweet={item.tweet}
+                hashtags={item.hashtags} />
+        );
+    }
+
     render() {
-        const oItem = {
+        const aItems = [{
             tweet: "To enjoy the glow of good health, you must exercise.",
             hashtags: ["#health", "#training", "#exercise"]
-        };
+        }, {
+            tweet: "To enjoy the glow of good health, you must exercise.",
+            hashtags: ["#health", "#training", "#exercise"]
+        }, {
+            tweet: "To enjoy the glow of good health, you must exercise.",
+            hashtags: ["#health", "#training", "#exercise"]
+        }];
 
         return (
             <section className="section section-padded blue-bg">
@@ -16,11 +31,7 @@ export default class BottomSection extends React.Component {
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
                             <div className="owl-twitter owl-carousel">
-                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
-
-                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
-
-                                <BottomItem tweet={oItem.tweet} hashtags={oItem.hashtags} />
+                                {aItems.map(this.renderBottomItem.bind(this))}
                             </div>
                         </div>
                     </div>

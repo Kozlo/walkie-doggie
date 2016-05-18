@@ -1,9 +1,9 @@
 import React from "react";
 
-export default class ItemSession extends React.Component {
+export default class ScheduleSession extends React.Component {
     render() {
         const { title, time } = this.props;
-        
+
         return (
             <div className="schedule-row row">
                 <div className="col-xs-6">
