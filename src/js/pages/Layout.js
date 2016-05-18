@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 import Preloader from "../components/layout/Preloader";
-import Nav from "../components/layout/Nav";
+import Nav from "../components/layout/navbar/Nav";
 import MobileNav from "../components/layout/MobileNav";
 import Footer from "../components/layout/footer/Footer";
 

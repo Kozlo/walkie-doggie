@@ -1,7 +1,11 @@
 import React from "react";
 
-import LogoImg from "../../../../libs/img/logo.png";
-import LogoActiveImg from "../../../../libs/img/logo-active.png";
+// import other modules
+import NavbarLinks from "./Links";
+
+// import images
+import LogoImg from "../../../../../libs/img/logo.png";
+import LogoActiveImg from "../../../../../libs/img/logo-active.png";
 
 export default class Nav extends React.Component {
     render() {
@@ -20,13 +24,7 @@ export default class Nav extends React.Component {
                     </div>
                     {/* Collect the nav links, forms, and other content for toggling  */}
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul className="nav navbar-nav navbar-right main-nav">
-                            <li><a href="#intro">Intro</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#modal1" className="btn btn-blue">Sign Up</a></li>
-                        </ul>
+                        <NavbarLinks />
                     </div>
                     {/* /.navbar-collapse */ }
                 </div>
