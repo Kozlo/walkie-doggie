@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import Preloader from "../components/layout/Preloader";
 import Nav from "../components/layout/Nav";
 import MobileNav from "../components/layout/MobileNav";
-import Footer from "../components/layout/Footer";
+import Footer from "../components/layout/footer/Footer";
 
 export default class Layout extends React.Component {
     render() {

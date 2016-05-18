@@ -1,8 +1,20 @@
 import React from "react";
 
+// import other modules
+import OpeningHours from "./OpeningHours";
+import SocialFooter from "./SocialFooter";
 
 export default class Footer extends React.Component {
     render() {
+        const oWeekdays = {
+            days: "Mon - Fri",
+            hours: "9:00 - 22:00"
+        };
+        const oWeekends = {
+            days: "Sat - Sun",
+            hours: "10:00 - 18:00"
+        };
+
         return (
             <footer>
                 <div className="container">
@@ -15,13 +27,11 @@ export default class Footer extends React.Component {
                         <div className="col-sm-6 text-center-mobile">
                             <h3 className="white">Opening Hours <span className="open-blink"></span></h3>
                             <div className="row opening-hours">
-                                <div className="col-sm-6 text-center-mobile">
-                                    <h5 className="light-white light">Mon - Fri</h5>
-                                    <h3 className="regular white">9:00 - 22:00</h3>
+                                <div className="col-sm-6">
+                                    <OpeningHours days={oWeekdays.days} hours={oWeekdays.hours} />
                                 </div>
                                 <div className="col-sm-6 text-center-mobile">
-                                    <h5 className="light-white light">Sat - Sun</h5>
-                                    <h3 className="regular white">10:00 - 18:00</h3>
+                                    <OpeningHours days={oWeekends.days} hours={oWeekends.hours} />
                                 </div>
                             </div>
                         </div>
@@ -31,11 +41,7 @@ export default class Footer extends React.Component {
                             <p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
                         </div>
                         <div className="col-sm-4 text-right text-center-mobile">
-                            <ul className="social-footer">
-                                <li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i className="fa fa-facebook"></i></a></li>
-                                <li><a href="http://www.twitter.com/codrops"><i className="fa fa-twitter"></i></a></li>
-                                <li><a href="https://plus.google.com/101095823814290637419"><i className="fa fa-google-plus"></i></a></li>
-                            </ul>
+                            <SocialFooter />
                         </div>
                     </div>
                 </div>
