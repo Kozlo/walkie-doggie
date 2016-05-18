@@ -39,7 +39,7 @@ export default class PricingPlan extends React.Component {
 
                     <PricingOption description={oOpt2.description} price={oOpt2.price} url={oOpt2.url} />
 
-                    <PricingOption description={oOpt3.description} price={oOpt4.price} url={oOpt3.url} />
+                    <PricingOption description={oOpt3.description} price={oOpt3.price} url={oOpt3.url} />
 
                     <PricingOption description={oOpt4.description} price={oOpt4.price} url={oOpt4.url} />
                 </ul>
