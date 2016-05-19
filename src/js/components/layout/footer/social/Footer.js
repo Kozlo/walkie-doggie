@@ -1,9 +1,15 @@
 import React from "react";
 
+// import other modules
+import SocialFooterLink from "./Link";
+
 export default class SocialFooter extends React.Component {
     renderSocialLink(link, index) {
         return (
-            <li key={`LayoutSocialFooter${index}`}><a href={link.url} target="_blank"><i className={`fa ${link.className}`}></i></a></li>
+            <SocialFooterLink
+                key={`LayoutSocialFooterLink${index}`}
+                url={link.url} 
+                className={link.className} />
         );
     }
 

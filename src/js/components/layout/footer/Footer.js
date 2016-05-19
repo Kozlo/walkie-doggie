@@ -2,7 +2,7 @@ import React from "react";
 
 // import other modules
 import OpeningHours from "./OpeningHours";
-import SocialFooter from "./SocialFooter";
+import SocialFooter from "./social/Footer";
 
 export default class Footer extends React.Component {
     render() {
