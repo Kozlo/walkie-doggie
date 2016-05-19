@@ -6,12 +6,10 @@ import ScheduleSession from "./Session";
 export default class Schedule extends React.Component {
     renderScheduleSession(session, index) {
         return (
-            <div key={`HomeSectionTopSchedule${index}`} className="item">
-                <ScheduleSession
-                    key={index}
-                    time={session.title}
-                    title={session.time} />
-            </div>
+            <ScheduleSession
+                key={`HomeSectionTopScheduleSession${index}`}
+                time={session.title}
+                title={session.time} />
         );
     }
 
