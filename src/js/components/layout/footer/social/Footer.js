@@ -8,7 +8,7 @@ export default class SocialFooter extends React.Component {
         return (
             <SocialFooterLink
                 key={`LayoutSocialFooterLink${index}`}
-                url={link.url} 
+                url={link.url}
                 className={link.className} />
         );
     }
