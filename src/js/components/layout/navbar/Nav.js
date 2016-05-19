@@ -1,7 +1,7 @@
 import React from "react";
 
 // import other modules
-import NavbarLinks from "./Links";
+import NavBarItems from "./Items";
 
 // import images
 import LogoImg from "../../../../../libs/img/logo.png";
@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
                     </div>
                     {/* Collect the nav links, forms, and other content for toggling  */}
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <NavbarLinks />
+                        <NavBarItems />
                     </div>
                     {/* /.navbar-collapse */ }
                 </div>

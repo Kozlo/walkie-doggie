@@ -1,16 +1,18 @@
 import React from "react";
 
-export default class NavbarLinks extends React.Component {
-    renderNavLink(link, index) {
+// import other components
+import NavBarLink from "./Link";
+
+export default class NavBarItems extends React.Component {
+    renderNavBarLink(link, index) {
         return (
-            <li key={`LayoutNavBarLinks${index}`}>
-                <a href={link.url}
-                   data-toggle={link.dataToggle}
-                   data-target={link.dataTarget}
-                   className={link.classNames}>
-                    {link.text}
-                </a>
-            </li>
+            <NavBarLink
+                key={`LayoutNavBarLink${index}`}
+                url={link.url}
+                dataToggle={link.dataToggle}
+                datTarget={link.dataTarget}
+                className={link.classNames}
+                text={link.text} />
         );
     }
 
@@ -38,7 +40,7 @@ export default class NavbarLinks extends React.Component {
         return (
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav navbar-right main-nav">
-                    {aNavLinks.map(this.renderNavLink.bind(this))}
+                    {aNavLinks.map(this.renderNavBarLink.bind(this))}
                 </ul>
             </div>
         );
