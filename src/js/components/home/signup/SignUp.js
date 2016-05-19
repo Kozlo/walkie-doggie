@@ -3,7 +3,7 @@ import React from "react";
 //import all components
 import PricingPlan from "./pricing/Plan";
 
-export default class Signup extends React.Component {
+export default class SignUp extends React.Component {
     render() {
         return (
             <div className="modal fade" id="modal1" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

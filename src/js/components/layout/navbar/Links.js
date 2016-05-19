@@ -1,14 +1,14 @@
 import React from "react";
 
 export default class NavbarLinks extends React.Component {
-    renderNavLink(oLink, iIndex) {
+    renderNavLink(link, index) {
         return (
-            <li key={iIndex}>
-                <a href={oLink.url}
-                   data-toggle={oLink.dataToggle}
-                   data-target={oLink.dataTarget}
-                   className={oLink.classNames}>
-                    {oLink.text}
+            <li key={`LayoutNavBarLinks${index}`}>
+                <a href={link.url}
+                   data-toggle={link.dataToggle}
+                   data-target={link.dataTarget}
+                   className={link.classNames}>
+                    {link.text}
                 </a>
             </li>
         );

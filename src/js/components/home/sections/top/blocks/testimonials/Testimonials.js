@@ -5,11 +5,12 @@ import TestimonialItem from "./Item";
 
 export default class Testimonials extends React.Component {
     renderTestimonialItem(item, index) {
-        <TestimonialItem
-            key={index}
-            review={item.review}
-            author={item.author}
-        />
+        return(
+            <TestimonialItem
+                key={`HomeSectionTopTestimonial${index}`}
+                review={item.review}
+                author={item.author}/>
+        );
     }
 
     render() {

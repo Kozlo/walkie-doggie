@@ -11,7 +11,7 @@ export default class PricingSection extends React.Component {
     renderPricingItem(item, index) {
         return (
             <PricingItem
-                key={index}
+                key={`HomeSectionPricing${index}`}
                 active={item.active}
                 image={item.image}
                 service={item.service}

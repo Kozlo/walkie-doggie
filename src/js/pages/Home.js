@@ -1,12 +1,13 @@
 import React from "react";
 
+// import other components
 import Header from "../components/home/Header";
 import TopSection from "../components/home/sections/top/Top";
 import ServicesSection from "../components/home/sections/services/Services";
 import TeamSection from "../components/home/sections/team/Team";
 import PricingSection from "../components/home/sections/pricing/Pricing";
 import BottomSection from "../components/home/sections/bottom/Bottom";
-import Signup from "../components/home/signup/Signup";
+import SignUp from "../components/home/signup/SignUp";
 
 export default class Home extends React.Component {
     render() {
@@ -24,7 +25,7 @@ export default class Home extends React.Component {
 
                 <BottomSection />
                 
-                <Signup />
+                <SignUp />
             </div>
         );
     }

@@ -7,7 +7,7 @@ export default class PricingPlan extends React.Component {
     renderPricingOption(opt, index) {
         return(
             <PricingOption
-                key={index}
+                key={`HomeSignUpPricingPlan${index}`}
                 description={opt.description}
                 price={opt.price}
                 url={opt.url} />

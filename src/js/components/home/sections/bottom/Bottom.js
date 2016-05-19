@@ -7,7 +7,7 @@ export default class BottomSection extends React.Component {
     renderBottomItem(item, index) {
         return (
             <BottomItem
-                key={index}
+                key={`HomeSectionBottomItem${index}`}
                 tweet={item.tweet}
                 hashtags={item.hashtags} />
         );

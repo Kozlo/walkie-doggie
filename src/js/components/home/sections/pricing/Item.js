@@ -3,7 +3,7 @@ import React from "react";
 export default class PricingItem extends React.Component {
     renderSpecs(spec, index) {
         return (
-            <li key={index}>{spec}</li>
+            <li key={`HomeSectionPricingItem${index}`}>{spec}</li>
         );
     }
 
