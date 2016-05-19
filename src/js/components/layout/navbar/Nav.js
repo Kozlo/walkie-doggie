@@ -9,8 +9,10 @@ import LogoActiveImg from "../../../../../libs/img/logo-active.png";
 
 export default class Nav extends React.Component {
     render() {
+        const { navClass, navStyle } = this.props;
+
         return (
-            <nav className="navbar">
+            <nav className={`navbar ${navClass}`} style={navStyle}>
                 <div className="container">
                     {/* Brand and toggle get grouped for better mobile display */}
                     <div className="navbar-header">

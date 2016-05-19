@@ -4,7 +4,7 @@ import React from "react";
 
 // import other components
 import Preloader from "../components/layout/Preloader";
-import Nav from "../components/layout/navbar/Nav";
+import NavBars from "../components/layout/navbar/NavBars";
 import MobileNav from "../components/layout/MobileNav";
 import Footer from "../components/layout/footer/Footer";
 
@@ -17,8 +17,8 @@ export default class Layout extends React.Component {
             <div>
                 <Preloader />
 
-                <Nav />
-                
+                <NavBars />
+
                 {this.props.children}
 
                 <Footer />
