@@ -1,15 +1,14 @@
 import React from "react";
 
 // import components
-import ScheduleSession from "./Session";
+import ScheduleItem from "./Item";
 
 export default class Schedule extends React.Component {
-    renderScheduleSession(session, index) {
+    renderScheduleItem(sessions, index) {
         return (
-            <ScheduleSession
-                key={`HomeSectionTopScheduleSession${index}`}
-                time={session.title}
-                title={session.time} />
+            <ScheduleItem
+                key={`HomeSectionTopScheduleItem${index}`}
+                sessions={sessions} />
         );
     }
 
@@ -24,12 +23,13 @@ export default class Schedule extends React.Component {
             title: "Cardio",
             time: "8:30 - 10:00"
         }];
+        const aItems = [aSessions, aSessions, aSessions];
 
         return (
             <div className="intro-table intro-table-first">
                 <h5 className="white heading">Today's Schedule</h5>
                 <div className="owl-carousel owl-schedule bottom">
-                    {aSessions.map(this.renderScheduleSession.bind(this))}
+                    {aItems.map(this.renderScheduleItem.bind(this))}
                 </div>
             </div>
         );
