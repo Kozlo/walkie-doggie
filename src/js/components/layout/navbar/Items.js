@@ -17,6 +17,8 @@ export default class NavBarItems extends React.Component {
     }
 
     render() {
+        const { ulClasses } = this.props;
+
         const aNavLinks = [{
             url: "#intro",
             text: "Intro"
@@ -38,7 +40,7 @@ export default class NavBarItems extends React.Component {
         }];
 
         return (
-            <ul className="nav navbar-nav navbar-right main-nav">
+            <ul className={ulClasses}>
                 {aNavLinks.map(this.renderNavBarLink.bind(this))}
             </ul>
         );

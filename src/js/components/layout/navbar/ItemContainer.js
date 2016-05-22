@@ -6,10 +6,12 @@ import NavBarItems from "./Items";
 
 export default class NavBarItemContainer extends React.Component {
     render() {
+        const sListClasses = "nav navbar-nav navbar-right main-nav";
+
         return (
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <NavBarItems />
+                    <NavBarItems ulClasses={sListClasses} />
                 </div>
             </div>
         );

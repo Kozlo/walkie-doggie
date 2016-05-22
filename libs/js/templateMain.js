@@ -46,7 +46,7 @@ jQuery(function($) {
 		});
 
 		// Navbar Init
-		$('.mobile-nav ul').html($('nav .navbar-nav').html());
+		
 		$('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
 		// Typing Intro Init
