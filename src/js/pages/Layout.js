@@ -5,7 +5,7 @@ import React from "react";
 // import other components
 import Preloader from "../components/layout/Preloader";
 import NavBars from "../components/layout/navbar/NavBars";
-import MobileNav from "../components/layout/MobileNav";
+import MobileNav from "../components/layout/navbar/MobileNav";
 import Footer from "../components/layout/footer/Footer";
 
 export default class Layout extends React.Component {
