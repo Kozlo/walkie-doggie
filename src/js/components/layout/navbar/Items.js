@@ -10,8 +10,8 @@ export default class NavBarItems extends React.Component {
                 key={`LayoutNavBarLink${index}`}
                 url={link.url}
                 dataToggle={link.dataToggle}
-                datTarget={link.dataTarget}
-                className={link.classNames}
+                dataTarget={link.dataTarget}
+                classNames={link.classNames}
                 text={link.text} />
         );
     }
