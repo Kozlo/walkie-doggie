@@ -38,11 +38,9 @@ export default class NavBarItems extends React.Component {
         }];
 
         return (
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav navbar-right main-nav">
-                    {aNavLinks.map(this.renderNavBarLink.bind(this))}
-                </ul>
-            </div>
+            <ul className="nav navbar-nav navbar-right main-nav">
+                {aNavLinks.map(this.renderNavBarLink.bind(this))}
+            </ul>
         );
     }
 }
