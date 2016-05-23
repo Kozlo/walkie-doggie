@@ -2,8 +2,10 @@ import React from "react";
 
 export default class Header extends React.Component {
     render() {
+        const oStyle = { opacity: 0 };
+
         return (
-            <header id="intro">
+            <header id="intro" style={oStyle}>
                 <div className="container">
                     <div className="table">
                         <div className="header-text">

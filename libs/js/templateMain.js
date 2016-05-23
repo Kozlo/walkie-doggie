@@ -8,7 +8,6 @@ jQuery(function($) {
 	// Window Load
 	$(window).load(function() {
 		// Preloader
-		$('.intro-tables, .parallax, header').css('opacity', '0');
 		$('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 			$('.preloader').hide();
 			$('.parallax, header').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
@@ -16,6 +15,7 @@ jQuery(function($) {
 			});
 		});
 
+		// TODO: double check, but I think this can be removed since there are no "parallax" scrolling in the page
 		// Header Init
 		if ($(window).height() > $(window).width()) {
 			var ratio = $('.parallax').width() / $('.parallax').height();
