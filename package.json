@@ -24,7 +24,7 @@
     "scripts": {
 	"start": "node server",
 	"build": "rimraf dist && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --profile --colors",
-	"npm run build",
+	"postinstall": "npm run build",
 	"dev": "webpack-dev-server --content-base src --inline --hot"
     },
     "dependencies": {
