@@ -23,12 +23,12 @@ module.exports = {
             filename: 'index.html'
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
-        new webpack.optimize.UglifyJsPlugin({
+/*        new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false,
                 screw_ie8: true
             }
-        }),
+        }),*/
         new StatsPlugin('webpack.stats.json', {
             source: false,
             modules: false
