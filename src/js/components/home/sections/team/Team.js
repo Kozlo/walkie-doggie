@@ -17,8 +17,8 @@ export default class TeamSection extends React.Component {
 
         // team member variables
         const oMember1 = {
-            name: "Ben Adamson",
-            role: "Fitness Instructor",
+            name: "Eva Williams",
+            role: "Personal Trainer",
             price: "$69.00",
             sessions: "1 - 5 sessions / month",
             image: {
@@ -27,8 +27,8 @@ export default class TeamSection extends React.Component {
             }
         };
         const oMember2 = {
-            name: "Eva Williams",
-            role: "Personal Trainer",
+            name: "Ben Adamson",
+            role: "Fitness Instructor",
             price: "$69.00",
             sessions: "1 - 5 sessions / month",
             image: {
