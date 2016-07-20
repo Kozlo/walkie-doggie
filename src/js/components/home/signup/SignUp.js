@@ -12,7 +12,7 @@ export default class SignUp extends React.Component {
                     <div className="modal-content modal-popup">
                         <a href="#" className="close-link"><i className="icon_close_alt2"></i></a>
                         <h3 className="white">Sign Up</h3>
-                        <form action="" className="popup-form">
+                        <form type="post" action="" className="popup-form">
                             <input type="text" className="form-control form-white" placeholder="First Name" />
                             <input type="text" className="form-control form-white" placeholder="Last Name" />
                             <input type="text" className="form-control form-white" placeholder="Email Address" />
