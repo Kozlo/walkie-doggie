@@ -35,9 +35,11 @@ app.use(passport.session());
 app.use(bodyParser.text({
     type: 'text/plain'
 }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // passport config
-var Account = require('./models/account');
+const Account = require('./models/account');
 passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());

@@ -1,0 +1,7 @@
+/* Tese are temporary styles while navbar isn't final*/
+@media (min-width: 768px) {
+    #app .navbar-nav > li > a {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

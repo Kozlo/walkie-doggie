@@ -7,7 +7,8 @@ import ServicesSection from "../components/home/sections/services/Services";
 import TeamSection from "../components/home/sections/team/Team";
 import PricingSection from "../components/home/sections/pricing/Pricing";
 import BottomSection from "../components/home/sections/bottom/Bottom";
-import SignUp from "../components/home/signup/SignUp";
+import SignUp from "../components/account/SignUp";
+import LogIn from "../components/account/LogIn";
 
 export default class Home extends React.Component {
     render() {
@@ -26,6 +27,8 @@ export default class Home extends React.Component {
                 <BottomSection />
                 
                 <SignUp />
+
+                <LogIn />
             </div>
         );
     }

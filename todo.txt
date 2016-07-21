@@ -1,0 +1,9 @@
+(DONE)- clean the Walkie Doggie Database to get rid of all crappy usernames
+(DONE)- test if creating a user with other fields works as well
+(DONE)- clean up account create code (prolly for now do nothing when the user is created)
+- find out the best way to log the user in once the account is registered (probably do this after the user page is created)
+- create a login page
+- create a login popup
+- create a profile page accessible via a link directly (e.g. host/user/someUserName
+- create a register page (besides popup) that can be accessed directly by a URL, not only by a popup
+-[BUG]: fix 'close' buttons for the modals

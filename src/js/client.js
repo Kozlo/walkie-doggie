@@ -16,6 +16,7 @@ import "../../libs/css/animate.css";
 import "../../libs/fonts/font-awesome-4.1.0/css/font-awesome.min.css";
 import "../../libs/fonts/eleganticons/et-icons.css";
 import "../../libs/css/cardio.css";
+import "../../libs/css/styles.css";
 
 // import all js files
 import "../../libs/js/jquery-1.11.1.min.js";

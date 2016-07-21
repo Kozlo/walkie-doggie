@@ -33,10 +33,15 @@ export default class NavBarItems extends React.Component {
             text: "Pricing"
         }, {
             url: "#",
+            text: "Log In",
+            dataToggle: "modal",
+            dataTarget: "#logInModal"
+        }, {
+            url: "#",
             text: "Sign Up",
             dataToggle: "modal",
-            dataTarget: "#modal1",
-            classNames: "btn btn-blue"
+            dataTarget: "#signUpModal",
+            classNames: "btn btn-sm btn-blue"
         }];
 
         return (
