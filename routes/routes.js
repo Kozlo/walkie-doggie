@@ -4,6 +4,8 @@ var Account = require('../models/account');
 module.exports = function (app) {
     // account creation route
     app.post('/register', function(req, res) {
+        res.redirect("/shit");
+        return;
         const oData = JSON.parse(req.body);
         console.log(oData);
 
@@ -45,12 +47,20 @@ module.exports = function (app) {
         });
     });
 
+/*    app.post('/login', passport.authenticate('local'), function(req, res) {
+        console.log(req.body);
+        console.log("Logged in successfully");
+        res.json({
+            message: "Login successful."
+        });
+    });*/
+
     // login route
     // when using a local strategy it is required to use a GET and not a POST
     app.get('/login', function(req, res, next) {
-        console.log("Attempting to log in...", next);
+        console.log("Attempting to log in...");
         passport.authenticate('local', function(err, user, info) {
-            console.log("Authentiation callback started....");
+            console.log("Authentiation callback started....", arguments);
             if (err) {
                 console.error("Error occurred while authenticating: ", err);
                 return next(err);
@@ -69,8 +79,9 @@ module.exports = function (app) {
                 }
                 console.log("User '" + user.username + "' logged in successfully!");
                 // TODO: once the profile page is done use it instead
-                return res.redirect('/users/' + user.username);
-/*                return res.json({
+                /*return res.redirect('/users/' + user.username);*/
+                res.send('success!');
+                /*return res.json({
                     success: true,
                     message: "User '" + user.username + "' logged in successfully!"
                 });*/

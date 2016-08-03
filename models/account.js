@@ -1,13 +1,8 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     passportLocalMongoose = require('passport-local-mongoose');
-// password is handled by passport-local-mongoose
+// username, password are handled by passport-local-mongoose
 var Account = new Schema({
-    username: {
-        type: String,
-        required: true
-    },
-    password: String,
     email: {
         type: String,
         required: true

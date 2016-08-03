@@ -35,13 +35,21 @@ import { Router, Route, IndexRoute, hashHistory } from "react-router";
 // import other components
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
+import Profile from "./pages/Profile";
+import ProfileLayout from "./pages/ProfileLayout";
+import Error from "./pages/Error";
 
 const app = document.getElementById('app');
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Layout}>
-            <IndexRoute component={Home}></IndexRoute>
+            <IndexRoute component={Home} />
+            <Route path="/user" component={ProfileLayout}>
+                {/*TODO: add user ID in the route (replace IndexRoute)*/}
+                <IndexRoute component={Profile} />
+            </Route>
+            <Route path="*" component={Error} />
         </Route>
     </Router>,
 app);

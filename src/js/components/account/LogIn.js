@@ -14,16 +14,17 @@ export default class LogIn extends React.Component {
     onSubmit(username, password) {
         const sUrl = `/login?username=${username}&password=${password}`;
 
-        /*fetch(sUrl, {
-            method: 'get'
-        })*/
-        fetch("/login", {
+        fetch(sUrl, {
+            method: 'GET'
+        })
+/*        fetch("/login", {
             method: 'post',
+            contentType: "application/json",
             body: JSON.stringify({
                 username: username,
                 password: password
             })
-        })
+        })*/
             .then((responseJson) => {
                 debugger;
                 // TODO: remove the console.log/alert when done developing

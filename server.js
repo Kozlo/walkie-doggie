@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const http = require('http'); // TODO: check if this is needed
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 
 // app
 const isDeveloping = process.env.NODE_ENV !== 'production';
@@ -41,6 +41,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // passport config
 const Account = require('./models/account');
 passport.use(new LocalStrategy(Account.authenticate()));
+passport.use(Account.createStrategy());
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
@@ -76,11 +77,18 @@ if (isDeveloping) {
 }
 
 // connect to our mongoDB database
-mongoose.connect(db.url);
+mongoose.connect(db.url, function(err) {
+    if (err) {
+        return;
+    }
+
+    console.log("Successfully connected to the DB: " + db.url);
+});
 
 app.listen(port, function onStart(err) {
     if (err) {
+        console.log("Successfully connected to the DB: " + db.url, err);
         console.log(err);
     }
-    console.info('==> 🌎 Listening on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
+    console.info('==> 🌎 Listening on port %s. Open up http://localhost:%s/ in your browser.', port, port);
 });
