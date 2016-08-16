@@ -8,10 +8,15 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
 const bodyParser = require('body-parser');
-const session = require('express-session');
-const http = require('http'); // TODO: check if this is needed
-const passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+
+// this is Auth0-related
+const jwt = require('express-jwt');
+const cors = require('cors');
+
+//const session = require('express-session');
+//const http = require('http'); // TODO: check if this is needed
+//const passport = require('passport');
+//var LocalStrategy = require('passport-local').Strategy;
 
 // app
 const isDeveloping = process.env.NODE_ENV !== 'production';
@@ -22,15 +27,17 @@ const app = express();
 const db = require('./config/db');
 const mongoose = require('mongoose');
 
+// TODO: check what this is doing (Auth0-related)
+app.use(cors());
 // app general config
 // TODO: save the secret separately
-app.use(session({
-    secret: 'daddy needs new shoes',
-    resave: false,
-    saveUninitialized: true
-}));
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(session({
+//    secret: 'daddy needs new shoes',
+//    resave: false,
+//    saveUninitialized: true
+//}));
+//app.use(passport.initialize());
+//app.use(passport.session());
 // needed, otherwise body from post requests cannot be read
 app.use(bodyParser.text({
     type: 'text/plain'
@@ -38,15 +45,30 @@ app.use(bodyParser.text({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Authentication middleware provided by express-jwt.
+// This middleware will check incoming requests for a valid
+// JWT on any routes that it is applied to.
+const authCheck = jwt({
+    secret: new Buffer('z4b9s5erPJsHkflIvoDDVnRkBUAG8fdXObt1Mix0eZElSvP3GAd0Wc36lsCth-tR', 'base64'),
+    audience: 't48Z83ky2Kvi1NyuAA9j1Uop3pDi3b9n'
+});
+
 // passport config
-const Account = require('./models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.use(Account.createStrategy());
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+//const Account = require('./models/account');
+//passport.use(new LocalStrategy(Account.authenticate()));
+//passport.use(Account.createStrategy());
+//passport.serializeUser(Account.serializeUser());
+//passport.deserializeUser(Account.deserializeUser());
 
 // routes
 require('./routes/routes')(app);
+
+// this is a test route
+// TODO: add back authCheck when figuring out this
+app.get('/testAuth', authCheck, (req, res) => {
+    console.log("Retrieving auth test...");
+    res.json({ success: true});
+});
 
 if (isDeveloping) {
     const compiler = webpack(config);

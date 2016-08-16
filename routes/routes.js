@@ -3,7 +3,7 @@ var Account = require('../models/account');
 
 module.exports = function (app) {
     // account creation route
-    app.post('/register', function(req, res) {
+/*    app.post('/register', function(req, res) {
         res.redirect("/shit");
         return;
         const oData = JSON.parse(req.body);
@@ -47,13 +47,13 @@ module.exports = function (app) {
         });
     });
 
-/*    app.post('/login', passport.authenticate('local'), function(req, res) {
+/!*    app.post('/login', passport.authenticate('local'), function(req, res) {
         console.log(req.body);
         console.log("Logged in successfully");
         res.json({
             message: "Login successful."
         });
-    });*/
+    });*!/
 
     // login route
     // when using a local strategy it is required to use a GET and not a POST
@@ -79,12 +79,12 @@ module.exports = function (app) {
                 }
                 console.log("User '" + user.username + "' logged in successfully!");
                 // TODO: once the profile page is done use it instead
-                /*return res.redirect('/users/' + user.username);*/
+                /!*return res.redirect('/users/' + user.username);*!/
                 res.send('success!');
-                /*return res.json({
+                /!*return res.json({
                     success: true,
                     message: "User '" + user.username + "' logged in successfully!"
-                });*/
+                });*!/
             });
         })(req, res, next);
     });
@@ -94,5 +94,5 @@ module.exports = function (app) {
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
-    });
+    });*/
 };

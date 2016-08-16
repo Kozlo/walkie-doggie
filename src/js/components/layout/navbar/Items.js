@@ -3,7 +3,73 @@ import React from "react";
 // import other components
 import NavBarLink from "./Link";
 
+// import actions and stores
+import AuthActions from '../../../actions/AuthActions';
+import AuthStore from '../../../stores/AuthStore';
+import TestActions from '../../../actions/TestActions';
+import TestStore from '../../../stores/TestStore';
+
 export default class NavBarItems extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            authenticated: AuthStore.isAuthenticated(),
+            success: false
+        };
+        this.onChange = this.onChange.bind(this);
+        this.login = this.login.bind(this);
+        this.logout = this.logout.bind(this);
+    }
+
+    componentWillMount() {
+        TestStore.addChangeListener(this.onChange);
+    }
+
+    /*componentDidMount() {
+        TestActions.getSuccess();
+    }*/
+
+    componentWillUnmount() {
+        TestStore.removeChangeListener(this.onChange);
+    }
+
+    onChange() {
+        this.setState({
+            success: TestStore.getSuccess()
+        });
+    }
+
+    // TODO: figure out exactly what this does and why it's needed
+/*    componentWillReceiveProps(nextProp) {
+        var bSuccess = TestActions.getSuccess();
+        debugger;
+        this.setState({
+            success: bSuccess
+        });
+    }*/
+
+    getSuccess() {
+        TestActions.getSuccess();
+    }
+
+    login() {
+        this.props.lock.show((err, profile, token) => {
+            if (err) {
+                // TODO: replace this with a normal error... thing...
+                alert(err);
+                return;
+            }
+            AuthActions.logUserIn(profile, token);
+            this.setState({authenticated: true});
+        });
+    }
+
+    logout() {
+        AuthActions.logUserOut();
+        this.setState({authenticated: false});
+    }
+
     renderNavBarLink(link, index) {
         return (
             <NavBarLink
@@ -31,7 +97,7 @@ export default class NavBarItems extends React.Component {
         }, {
             url: "#pricing",
             text: "Pricing"
-        }, {
+        }/*, {
             url: "#",
             text: "Log In",
             dataToggle: "modal",
@@ -42,11 +108,18 @@ export default class NavBarItems extends React.Component {
             dataToggle: "modal",
             dataTarget: "#signUpModal",
             classNames: "btn btn-sm btn-blue"
-        }];
+        }*/];
 
         return (
             <ul className={ulClasses}>
                 {aNavLinks.map(this.renderNavBarLink.bind(this))}
+                {!this.state.authenticated ? (
+                    <li><button onClick={this.login}>Login</button></li>
+                ) : (
+                    <li><button onClick={this.logout}>Logout</button></li>
+                )}
+                <li><button onClick={this.getSuccess}>Get Success</button></li>
+                <li><p>Success: {this.state.success ? "success" : "failure"}</p></li>
             </ul>
         );
     }
