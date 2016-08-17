@@ -26,9 +26,9 @@ export default class NavBarItems extends React.Component {
         TestStore.addChangeListener(this.onChange);
     }
 
-    /*componentDidMount() {
+    componentDidMount() {
         TestActions.getSuccess();
-    }*/
+    }
 
     componentWillUnmount() {
         TestStore.removeChangeListener(this.onChange);
@@ -41,13 +41,11 @@ export default class NavBarItems extends React.Component {
     }
 
     // TODO: figure out exactly what this does and why it's needed
-/*    componentWillReceiveProps(nextProp) {
-        var bSuccess = TestActions.getSuccess();
-        debugger;
+    componentWillReceiveProps(nextProp) {
         this.setState({
-            success: bSuccess
+            success: TestActions.getSuccess()
         });
-    }*/
+    }
 
     getSuccess() {
         TestActions.getSuccess();
