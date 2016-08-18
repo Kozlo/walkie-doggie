@@ -115,7 +115,7 @@ export default class NavBarItems extends React.Component {
                 {!this.state.authenticated ? (
                     <li><a onClick={this.login.bind(this)} className={"btn btn-sm btn-blue"}>{"Login/Register"}</a></li>
                 ) : (
-                    <li><a href={"#"} onClick={this.logout.bind(this)}>{"Logout"}</a></li>
+                    <li><a onClick={this.logout.bind(this)} className={"btn btn-sm btn-blue"}>{"Logout"}</a></li>
                 )}
                 {/*TODO: remove when done testing*/}
                 {/*<li><button onClick={this.getSuccess} className="btn btn-sm btn-blue">Get Success</button></li>
