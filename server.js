@@ -34,6 +34,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Authentication middleware provided by express-jwt.
 // This middleware will check incoming requests for a valid
 // JWT on any routes that it is applied to.
+// TODO: replace the strings with references to environmental vars
 const authCheck = jwt({
     secret: new Buffer('z4b9s5erPJsHkflIvoDDVnRkBUAG8fdXObt1Mix0eZElSvP3GAd0Wc36lsCth-tR', 'base64'),
     audience: 't48Z83ky2Kvi1NyuAA9j1Uop3pDi3b9n'
@@ -43,7 +44,7 @@ const authCheck = jwt({
 require('./routes/routes')(app);
 
 // this is a test route
-// TODO: add back authCheck when figuring out this
+// TODO: remove when done testing
 app.get('/testAuth', authCheck, (req, res) => {
     console.log("Retrieving auth test...");
     res.json({ success: true});

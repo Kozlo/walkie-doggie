@@ -1,19 +1,9 @@
-(DONE)- clean the Walkie Doggie Database to get rid of all crappy usernames
-(DONE)- test if creating a user with other fields works as well
-(DONE)- clean up account create code (prolly for now do nothing when the user is created)
-(DONE)- Introduce Flux to the project, so that I can implmement Auth0
-- find out the best way to log the user in once the account is registered (probably do this after the user page is created)
-    - consider Auth0 instead of Passport: https://auth0.com/blog/adding-authentication-to-your-react-flux-app/
-- create a login page
-(DONE)- create a login popup
-- Replace Bootstrap with react-bootstrap
-(DONE)- Add simple Auth0 authentication
-(DONE)- Add Flux to the app
-(DONE)- Test testSuccess route
+- Create login/register page for now and then figure out about the popups and login/registration separation, additional data etc.
+  - OR maybe just add popup for now instead and add the page later as it's easier....
 - Figure out how to have login and register buttons separately (wiht the default Auth0 modal it's the same button)
-- Make Auth0 logon custom (i.e. use my own form and save the data locally)
-- Make Auth0 usable by the app on a per-user basis (e.g. bet able to specify username and render the profile page accordingly)
-- Clean up the old passport code (remove code and uninstall packages)
 - create a profile page accessible via a link directly (e.g. host/user/someUserName
-- create a register page (besides popup) that can be accessed directly by a URL, not only by a popup
--[BUG]: fix 'close' buttons for the modals
+  - need to figure out how to extract user data from Auth0
+-[BUG]: fix 'close' buttons for the modals if still relevant after Auth0
+
+Later:
+- Replace Bootstrap with react-bootstrap

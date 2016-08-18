@@ -6,8 +6,8 @@ import NavBarLink from "./Link";
 // import actions and stores
 import AuthActions from '../../../actions/AuthActions';
 import AuthStore from '../../../stores/AuthStore';
-import TestActions from '../../../actions/TestActions';
-import TestStore from '../../../stores/TestStore';
+//import TestActions from '../../../actions/TestActions';
+//import TestStore from '../../../stores/TestStore';
 
 export default class NavBarItems extends React.Component {
 
@@ -17,39 +17,39 @@ export default class NavBarItems extends React.Component {
             authenticated: AuthStore.isAuthenticated(),
             success: false
         };
-        this.onChange = this.onChange.bind(this);
+        //this.onChange = this.onChange.bind(this);
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
     }
 
     componentWillMount() {
-        TestStore.addChangeListener(this.onChange);
+        //TestStore.addChangeListener(this.onChange);
     }
 
     componentDidMount() {
-        TestActions.getSuccess();
+        //TestActions.getSuccess();
     }
 
     componentWillUnmount() {
-        TestStore.removeChangeListener(this.onChange);
+        //TestStore.removeChangeListener(this.onChange);
     }
 
-    onChange() {
+/*    onChange() {
         this.setState({
             success: TestStore.getSuccess()
         });
-    }
+    }*/
 
     // TODO: figure out exactly what this does and why it's needed
     componentWillReceiveProps(nextProp) {
-        this.setState({
+/*        this.setState({
             success: TestActions.getSuccess()
-        });
+        });*/
     }
 
-    getSuccess() {
+/*    getSuccess() {
         TestActions.getSuccess();
-    }
+    }*/
 
     login() {
         this.props.lock.show((err, profile, token) => {
@@ -95,7 +95,7 @@ export default class NavBarItems extends React.Component {
         }, {
             url: "#pricing",
             text: "Pricing"
-        }/*, {
+        },/*, {
             url: "#",
             text: "Log In",
             dataToggle: "modal",
@@ -111,13 +111,15 @@ export default class NavBarItems extends React.Component {
         return (
             <ul className={ulClasses}>
                 {aNavLinks.map(this.renderNavBarLink.bind(this))}
+                {/*TODO: consider moving this to the NavLinks and also add visible state based on the authencated and add onClick there as well*/}
                 {!this.state.authenticated ? (
-                    <li><button onClick={this.login}>Login</button></li>
+                    <li><a onClick={this.login.bind(this)} className={"btn btn-sm btn-blue"}>{"Login/Register"}</a></li>
                 ) : (
-                    <li><button onClick={this.logout}>Logout</button></li>
+                    <li><a href={"#"} onClick={this.logout.bind(this)}>{"Logout"}</a></li>
                 )}
-                <li><button onClick={this.getSuccess}>Get Success</button></li>
-                <li><p>Success: {this.state.success ? "success" : "failure"}</p></li>
+                {/*TODO: remove when done testing*/}
+                {/*<li><button onClick={this.getSuccess} className="btn btn-sm btn-blue">Get Success</button></li>
+                <li><p>Success: {this.state.success ? "success" : "failure"}</p></li>*/}
             </ul>
         );
     }
