@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 // import other components
 import NavBarLink from "./Link";
@@ -112,6 +113,10 @@ export default class NavBarItems extends React.Component {
             <ul className={ulClasses}>
                 {aNavLinks.map(this.renderNavBarLink.bind(this))}
                 {/*TODO: consider moving this to the NavLinks and also add visible state based on the authencated and add onClick there as well*/}
+                {/*TODO: use '${JSON.parse(AuthStore.getUser()).email}' if needed to store the email in the link*/}
+                {this.state.authenticated ?
+                    <li><Link to={`profile`}>{"My Profile"}</Link></li> : ""
+                }
                 {!this.state.authenticated ? (
                     <li><a onClick={this.login.bind(this)} className={"btn btn-sm btn-blue"}>{"Login/Register"}</a></li>
                 ) : (

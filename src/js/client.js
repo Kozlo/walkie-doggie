@@ -36,7 +36,6 @@ import { Router, Route, IndexRoute, hashHistory } from "react-router";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Profile from "./pages/Profile";
-import ProfileLayout from "./pages/ProfileLayout";
 import Error from "./pages/Error";
 
 const app = document.getElementById('app');
@@ -45,10 +44,9 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={Home} />
-            <Route path="/user" component={ProfileLayout}>
-                {/*TODO: add user ID in the route (replace IndexRoute)*/}
-                <IndexRoute component={Profile} />
-            </Route>
+            {/*TODO: figure out if it's needed to store the username/email in the link too*/}
+            {/*TODO: there's a bug when going 'back' in Chrome from profile to home where the header and the non-mobiel navbar isn't loaded (just like it was on Heorku with the pre-loader*/}
+            <Route path="/profile" component={Profile}/>
             <Route path="*" component={Error} />
         </Route>
     </Router>,

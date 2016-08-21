@@ -1,6 +1,9 @@
 import React from "react";
 
 // import other components
+import Preloader from "../components/layout/Preloader";
+import NavBars from "../components/layout/navbar/NavBars";
+import MobileNav from "../components/layout/navbar/MobileNav";
 import Header from "../components/home/Header";
 import TopSection from "../components/home/sections/top/Top";
 import ServicesSection from "../components/home/sections/services/Services";
@@ -14,6 +17,10 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
+                <Preloader />
+
+                <NavBars />
+
                 <Header />
 
                 <TopSection />
@@ -29,6 +36,8 @@ export default class Home extends React.Component {
                 <SignUp />
 
                 <LogIn />
+
+                <MobileNav />
             </div>
         );
     }
