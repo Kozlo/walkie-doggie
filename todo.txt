@@ -1,8 +1,13 @@
 - Instead of a separate profile page, have the home page show different content depending on whether the user is logged in or not
+  - probably also add link to infographics in navbar (logged in)
+  - probably also add prices to the home page (not logged in)
+  - further - maybe have some other page with user-specific data (email, password, phone etc.) and other info (booked walks, previous walks with info/comments)
+
 (SUSPENDED)- create a profile page accessible via a link directly (e.g. host/user/someUserName
+  NOTE: this will be discussed later and maybe left in a different format....
   (DONE)- need to figure out how to extract user data from Auth0: the data is stored in localstorage as 'user'
   (DONE)- need to add a link in the header to "profile"
-    (DONE_- need to add a route to router configuration
+    (DONE)- need to add a route to router configuration
   (DONE)- need to add an empty 'profile' page
   - need to adjust Layout to be different for the profile page
     - MAYBE move the navbars to each specific page, and then pass a property telling which page it is
@@ -10,6 +15,7 @@
   - need to adjust navbar to be different for the profile page
   - need to make the "profile" component similar ar the "home" component so that something is shown
 [BUG] when going to the profile page and back, the navbar and the header aren't visible
+
 Later:
 - Replace Bootstrap with react-bootstrap
 - Figure out how to have login and register buttons separately (with the default Auth0 modal it's the same button)
