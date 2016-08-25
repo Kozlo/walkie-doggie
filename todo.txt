@@ -1,4 +1,15 @@
+TO DO:
 - Instead of a separate profile page, have the home page show different content depending on whether the user is logged in or not
+  (SUSPENDED)- create a section for infographics
+  (SUSPENDED)- create a section for 'info about us'
+  (SUSPENDED)- create a section for pricing?
+  (DONE)- Rename "services" section with "Dog Walking" section indicating it's about that
+  (DONE)- replace existing pics with random ppl with Ilzite and Martintins
+  (DONE)- replace the twitter section with a 'contacts' section
+  (DONE)- change the footer accordingly
+
+Improvements:
+  - probably add a button for 'intro' for the home page
   - probably also add link to infographics in navbar (logged in)
   - probably also add prices to the home page (not logged in)
   - further - maybe have some other page with user-specific data (email, password, phone etc.) and other info (booked walks, previous walks with info/comments)
@@ -16,7 +27,33 @@
   - need to make the "profile" component similar ar the "home" component so that something is shown
 [BUG] when going to the profile page and back, the navbar and the header aren't visible
 
+Functional
+- Registration button on homepage
+  - What happens when clicking on the register button in the homepage?
+  - What style should the registration button on homepage be?
+  - What text should the registration button have
+- Infographics
+  - Should we keep the existing style? Like it's for the top section?
+    - should we keep the 'services'?
+  -
+
+- About us
+  - what should be included in this section?
+  - should we keep 'the team'?
+  - should we add different services like "walking", "running", "dog sitting"?
+
+- Contacts
+  - how should it look like?
+
+- Footer
+  - what should be included?
+
 Later:
 - Replace Bootstrap with react-bootstrap
+- maybe update the CSS/JS files to remove stuff that isn't needed anymore
 - Figure out how to have login and register buttons separately (with the default Auth0 modal it's the same button)
 - create separate login/register pages
+
+Business matters:
+- consider hiring people instead of paying per walk (do some research for this)
+- consider going to a business incubator

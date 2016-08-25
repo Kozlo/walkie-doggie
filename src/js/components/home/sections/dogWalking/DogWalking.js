@@ -8,7 +8,7 @@ import WeightBlueIconImg from "../../../../../../libs/img/icons/weight-blue.png"
 // import components
 import ServiceItem from "./Item";
 
-export default class ServicesSection extends React.Component {
+export default class DogWalkingSection extends React.Component {
     render() {
         const oItem1 = {
             name: "Cardio Training",
@@ -36,7 +36,7 @@ export default class ServicesSection extends React.Component {
         };
 
         return (
-            <section id="services" className="section section-padded">
+            <section id="dogWalking" className="section section-padded">
                 <div className="container">
                     <div className="row text-center title">
                         <h2>Services</h2>

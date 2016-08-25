@@ -6,12 +6,10 @@ import NavBars from "../components/layout/navbar/NavBars";
 import MobileNav from "../components/layout/navbar/MobileNav";
 import Header from "../components/home/Header";
 import TopSection from "../components/home/sections/top/Top";
-import ServicesSection from "../components/home/sections/services/Services";
-import TeamSection from "../components/home/sections/team/Team";
+import DogWalkingSection from "../components/home/sections/dogWalking/DogWalking";
+import AboutSection from "../components/home/sections/about/About";
 import PricingSection from "../components/home/sections/pricing/Pricing";
-import BottomSection from "../components/home/sections/bottom/Bottom";
-import SignUp from "../components/account/SignUp";
-import LogIn from "../components/account/LogIn";
+import ContactSection from "../components/home/sections/contact/Contact";
 
 export default class Home extends React.Component {
     render() {
@@ -25,17 +23,13 @@ export default class Home extends React.Component {
 
                 <TopSection />
 
-                <ServicesSection />
+                <DogWalkingSection />
 
-                <TeamSection />
+                <AboutSection />
 
                 <PricingSection />
 
-                <BottomSection />
-                
-                <SignUp />
-
-                <LogIn />
+                <ContactSection />
 
                 <MobileNav />
             </div>

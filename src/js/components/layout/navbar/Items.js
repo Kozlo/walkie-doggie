@@ -85,38 +85,27 @@ export default class NavBarItems extends React.Component {
         const { ulClasses } = this.props;
 
         const aNavLinks = [{
-            url: "#intro",
-            text: "Intro"
+            url: "#dogWalking",
+            text: "Walks"
         }, {
-            url: "#services",
-            text: "Services"
-        }, {
-            url: "#team",
-            text: "Team"
+            url: "#aboutUs",
+            text: "About"
         }, {
             url: "#pricing",
-            text: "Pricing"
-        },/*, {
-            url: "#",
-            text: "Log In",
-            dataToggle: "modal",
-            dataTarget: "#logInModal"
+            text: "Prices"
         }, {
-            url: "#",
-            text: "Sign Up",
-            dataToggle: "modal",
-            dataTarget: "#signUpModal",
-            classNames: "btn btn-sm btn-blue"
-        }*/];
+            url: "#contact",
+            text: "Contacts"
+        }];
 
         return (
             <ul className={ulClasses}>
                 {aNavLinks.map(this.renderNavBarLink.bind(this))}
                 {/*TODO: consider moving this to the NavLinks and also add visible state based on the authencated and add onClick there as well*/}
                 {/*TODO: use '${JSON.parse(AuthStore.getUser()).email}' if needed to store the email in the link*/}
-                {this.state.authenticated ?
+{/*                {this.state.authenticated ?
                     <li><Link to={`profile`}>{"My Profile"}</Link></li> : ""
-                }
+                }*/}
                 {!this.state.authenticated ? (
                     <li><a onClick={this.login.bind(this)} className={"btn btn-sm btn-blue"}>{"Login/Register"}</a></li>
                 ) : (

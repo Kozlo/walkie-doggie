@@ -46,7 +46,7 @@ ReactDOM.render(
             <IndexRoute component={Home} />
             {/*TODO: figure out if it's needed to store the username/email in the link too*/}
             {/*TODO: there's a bug when going 'back' in Chrome from profile to home where the header and the non-mobiel navbar isn't loaded (just like it was on Heorku with the pre-loader*/}
-            <Route path="/profile" component={Profile}/>
+            {/*<Route path="/profile" component={Profile}/>*/}
             <Route path="*" component={Error} />
         </Route>
     </Router>,

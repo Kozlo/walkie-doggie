@@ -1,14 +1,14 @@
 import React from "react";
 
 //import images
-import Team1Img from "../../../../../../libs/img/team/team1.jpg";
+import ilziteImg from "../../../../../../libs/img/team/ilzite.jpg";
+import martintinsImg from "../../../../../../libs/img/team/martintins.jpg";
 import Team2Img from "../../../../../../libs/img/team/team2.jpg";
-import Team3Img from "../../../../../../libs/img/team/team3.jpg";
 
 //import components
 import TeamMember from "./Member";
 
-export default class TeamSection extends React.Component {
+export default class AboutSection extends React.Component {
     render() {
         // styles
         const sBackground1 = "url('img/team/team-cover1.jpg')";
@@ -16,17 +16,27 @@ export default class TeamSection extends React.Component {
         const sBackground3 = "url('img/team/team-cover3.jpg')";
 
         // team member variables
-        const oMember1 = {
-            name: "Eva Williams",
-            role: "Personal Trainer",
-            price: "$69.00",
-            sessions: "1 - 5 sessions / month",
+        const oIlzite = {
+            name: "Ilze Maderniece",
+            role: "Dog Walker",
+            price: "€5",
+            sessions: "30 minutes",
             image: {
-                url: Team1Img,
-                alt: "Team Image"
+                url: ilziteImg,
+                alt: "Ilze"
             }
         };
-        const oMember2 = {
+        const oMartintins = {
+            name: "Martins Kozlovskis",
+            role: "Dog Walker",
+            price: "€5",
+            sessions: "30 minutes",
+            image: {
+                url: martintinsImg,
+                alt: "Martins"
+            }
+        };
+        const oMember3 = {
             name: "Ben Adamson",
             role: "Fitness Instructor",
             price: "$69.00",
@@ -36,19 +46,9 @@ export default class TeamSection extends React.Component {
                 alt: "Team Image"
             }
         };
-        const oMember3 = {
-            name: "John Phillips",
-            role: "Personal Trainer",
-            price: "$69.00",
-            sessions: "1 - 5 sessions / month",
-            image: {
-                url: Team3Img,
-                alt: "Team Image"
-            }
-        };
 
         return (
-            <section id="team" className="section gray-bg">
+            <section id="aboutUs" className="section gray-bg">
                 <div className="container">
                     <div className="row title text-center">
                         <h2 className="margin-top">Team</h2>
@@ -56,10 +56,10 @@ export default class TeamSection extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <TeamMember member={oMember1} background={sBackground1} />
+                            <TeamMember member={oIlzite} background={sBackground1} />
                         </div>
                         <div className="col-md-4">
-                            <TeamMember member={oMember2} background={sBackground2} />
+                            <TeamMember member={oMartintins} background={sBackground2} />
                         </div>
                         <div className="col-md-4">
                             <TeamMember member={oMember3} background={sBackground3} />

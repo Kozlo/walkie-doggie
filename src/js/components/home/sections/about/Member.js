@@ -16,7 +16,7 @@ export default class TeamMember extends React.Component {
                         <h5 className="light light-white">{member.sessions}</h5>
                     </div>
                 </div>
-                <img src={member.image.url} alt={member.image.alt} className="avatar" />
+                <img src={member.image.url} alt={member.image.alt} className="avatar" width={"120px"} />
                 <div className="title">
                     <h4>{member.name}</h4>
                     <h5 className="muted regular">{member.role}</h5>

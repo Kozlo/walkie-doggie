@@ -11,9 +11,11 @@ export default class Header extends React.Component {
                         <div className="header-text">
                             <div className="row">
                                 <div className="col-md-12 text-center">
-                                    <h3 className="light white">Take care of your body.</h3>
-                                    <h1 className="white typed">It's the only place you have to live.</h1>
+                                    <h3 className="light white">Take care of your dog.</h3>
+                                    <h1 className="white typed">It's one of the best friend you have.</h1>
                                     <span className="typed-cursor">|</span>
+                                    <br />
+                                    <button className="btn btn-lg btn-blue">Register</button>
                                 </div>
                             </div>
                         </div>
