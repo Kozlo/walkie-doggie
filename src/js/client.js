@@ -8,6 +8,10 @@ import "../../libs/img/favicons/favicon-16x16.png";
 import "../../libs/img/favicons/manifest.json";
 import "../../libs/img/favicons/browserconfig.xml";
 
+// import images
+import "../../libs/img/dogs/retriever.jpeg";
+import "../../libs/img/dogs/bulldog.jpg";
+
 // import all css files
 import "../../libs/css/normalize.css";
 import "../../libs/css/bootstrap.css";
