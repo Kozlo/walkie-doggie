@@ -10,8 +10,22 @@ export default class Header extends React.Component {
             authenticated: AuthStore.isAuthenticated()
         };
     }
+    componentWillMount() {
+        AuthStore.addChangeListener(this._onChange.bind(this))
+    }
+    componentWillUnmount() {
+        AuthStore.removeChangeListener(this._onChange.bind(this))
+    }
+    _onChange() {
+        this.setState({
+            authenticated: AuthStore.isAuthenticated()
+        });
+    }
     render() {
-        const oStyle = { opacity: 0 };
+        const oStyle = {
+            opacity: 0,
+            backgroundImage: this.state.authenticated ? "url('/libs/img/dogs/retriever.jpeg')" : "url('/libs/img/dogs/bulldog.jpg')"
+        };
 
         return (
             <header id="intro" style={oStyle}>

@@ -114,8 +114,12 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
-	background-size: cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position: center;
 }
 
 header .table {
