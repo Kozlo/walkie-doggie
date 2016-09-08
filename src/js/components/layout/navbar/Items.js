@@ -24,6 +24,7 @@ export default class NavBarItems extends React.Component {
     }
 
     componentWillMount() {
+        AuthStore.addChangeListener(this._onChange.bind(this));
         //TestStore.addChangeListener(this.onChange);
     }
 
@@ -32,9 +33,14 @@ export default class NavBarItems extends React.Component {
     }
 
     componentWillUnmount() {
+        AuthStore.removeChangeListener(this._onChange.bind(this));
         //TestStore.removeChangeListener(this.onChange);
     }
-
+    _onChange() {
+        this.setState({
+            authenticated: AuthStore.isAuthenticated()
+        });
+    }
 /*    onChange() {
         this.setState({
             success: TestStore.getSuccess()
@@ -84,19 +90,24 @@ export default class NavBarItems extends React.Component {
     render() {
         const { ulClasses } = this.props;
 
-        const aNavLinks = [{
+        const aNavLinks = []
+        aNavLinks.push({
             url: "#dogWalking",
             text: "Walks"
-        }, {
-            url: "#aboutUs",
-            text: "About"
-        }, {
+        });
+        if (!this.state.authenticated) {
+            aNavLinks.push({
+                url: "#aboutUs",
+                text: "About"
+            });
+        }
+        aNavLinks.push(...[{
             url: "#pricing",
             text: "Prices"
         }, {
             url: "#contact",
             text: "Contacts"
-        }];
+        }]);
 
         return (
             <ul className={ulClasses}>

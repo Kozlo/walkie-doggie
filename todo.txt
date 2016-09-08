@@ -7,6 +7,7 @@ TO DO:
   (DONE)- replace existing pics with random ppl with Ilzite and Martintins
   (DONE)- replace the twitter section with a 'contacts' section
   (DONE)- change the footer accordingly
+  (DONE)- create a different-looking home page when the user is logged in (also figure out the best way to show the content)
 
 Improvements:
   - probably add a button for 'intro' for the home page
